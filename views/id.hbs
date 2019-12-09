@@ -1,0 +1,37 @@
+<div class="mb-3">
+  <div class="card-body text-white bg-dark ">
+    <h5 class="card-title">command: {{data.command}}</h5>>
+    <p class="card-text">description: {{data.description}}</p>
+    <p class="card-text">exemple: {{data.exemple}}</p>
+    <form action="delete" method="POST">
+        <input type="hidden" name="id" value={{data.id}}>
+        <button type="submit" class="btn btn-danger">Delete record</button>
+    </form>
+  </div>
+
+  <form action="/changeCommand" method="post" class="changeForm">
+  <div class="form-group">
+    <label for="command">Update command</label>
+    <input type="hidden" id="id" name="id" value={{data.id}}>
+    <input required="required" type="text" class="form-control" id="command" name="command" placeholder="Enter  command">
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+<form action="/changeDescription" method="post" class="changeForm">
+  <div class="form-group">
+    <label for="description">Update description</label>
+    <input type="hidden" id="id" name="id" value={{data.id}}>
+    <input required="required" type="text" class="form-control" id="description" name="description" placeholder="description">
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+<form action="/changeExemple" method="post" class="changeForm">
+  <div class="form-group">
+    <label for="exemple">Update exemple</label>
+     <input type="hidden" id="id" name="id" value={{data.id}}>
+    <input required="required" type="text" class="form-control" id="exemple" name="exemple" placeholder="exemple">
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>

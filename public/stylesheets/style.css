@@ -1,0 +1,25 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background-image: url(../images/background.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-origin: unset;
+}
+.navbar-brand{
+  font-family: 'Pacifico', cursive;
+}
+.card-body{
+  background-color: rgba(0, 0, 0, 0.801) !important;
+  margin-top: 20px;
+}
+.card-body a{
+  color: aliceblue;
+}
+
+.createForm, .changeForm{
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.801) !important;
+  color: aliceblue;
+}
