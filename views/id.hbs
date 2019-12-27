@@ -1,14 +1,11 @@
-<div class="mb-3">
-  <div class="card-body text-white bg-dark ">
-    <h5 class="card-title">command: {{data.command}}</h5>>
+<div class="mb-3 my_edit_card">
+  <div class="card-body  ">
+    <h5 class="card-title">command: {{data.command}}</h5>
     <p class="card-text">description: {{data.description}}</p>
     <p class="card-text">exemple: {{data.exemple}}</p>
-    <form action="delete" method="POST">
-        <input type="hidden" name="id" value={{data.id}}>
-        <button type="submit" class="btn btn-danger">Delete record</button>
-    </form>
   </div>
-
+  </div>
+<div class="my_form_edit">
   <form action="/changeCommand" method="post" class="changeForm">
   <div class="form-group">
     <label for="command">Update command</label>
@@ -18,7 +15,7 @@
   <button type="submit" class="btn btn-primary">Update</button>
 </form>
 
-<form action="/changeDescription" method="post" class="changeForm">
+<form action="/Description" method="POST" class="changeForm">
   <div class="form-group">
     <label for="description">Update description</label>
     <input type="hidden" id="id" name="id" value={{data.id}}>
@@ -35,3 +32,6 @@
   </div>
   <button type="submit" class="btn btn-primary">Update</button>
 </form>
+
+</div>
+  

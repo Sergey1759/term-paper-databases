@@ -7,19 +7,202 @@ body{
   background-attachment: fixed;
   background-origin: unset;
 }
-.navbar-brand{
-  font-family: 'Pacifico', cursive;
-}
-.card-body{
-  background-color: rgba(0, 0, 0, 0.801) !important;
-  margin-top: 20px;
-}
-.card-body a{
+
+.table{ 
+  z-index: 2000;
+  width: 80%;
+  text-align: center;
+  background: rgba(34, 28, 28, 0.24);
+  margin-left: 10%;
+  border-collapse: collapse;
+  vertical-align: middle;
   color: aliceblue;
+  font-family: 'Girassol', cursive;
+}
+tr{
+  z-index: 2000;
+  border: 1px solid black; 
+}
+td{
+  z-index: 2000;
+  padding: 10px;
+  border: 1px solid black;
+  vertical-align: middle;
+}
+.menu{
+  padding: 40px;
+  border-radius: 50%;
+  z-index: 1000;
+  left: -25px;
+  top: -25px;
+  position: fixed;
+  background-color: rgba(56, 84, 243, 0.685);
+  text-align: center;
+  margin: auto;
+  transform: rotate(-45deg);
+  font-family: 'Girassol', cursive;
+  font-size: 20px;
+  color: cornsilk;
+  transition: 0.9s;
+  border: 3px solid rgba(255, 0, 0, 0);
+}
+.menu:hover{
+  left: -25px;
+  top: -25px;
+  padding: 44px;
+  transition: 0.9s;
+  background-color: rgba(30, 150, 201, 0.685);
+  animation-name: border-animation;
+  animation-duration: 200ms;
+  animation-iteration-count: infinite;
+  z-index: 2000;
+}
+.menu_active{
+  z-index: 2000;
+  width: 300px;
+  height: 400px;
+  transition: 0.5s;
+  z-index: 1000;
+  left:0px;
+  top: 0px;
+  position: fixed;
+  background-color: rgb(19, 81, 107);
+  text-align: center;
+  margin: auto;
+  font-family: 'Girassol', cursive;
+  font-size: 20px;
+  color: cornsilk;
+  transition: 0.5s;
+  padding: 10px;
+  display: none;
+  animation-name: slidein;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 1500ms;
+  border-radius: 0px 0px 40px;
+}
+.menu_active input{
+  position: relative;
+  width: 50%;
+  float: left;
+}
+.menu_active button{
+  position: relative;
+  width: 30%;
+  float: left;
+}
+.animation_out{
+  animation-name: slideout;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-duration: 900ms;
+}
+@keyframes slidein {
+  from {
+    left: -300px;
+  }
+
+  to {
+    left: 0px;
+  }
+}
+@keyframes slideout {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: -300px;
+  }
+}
+@keyframes border-animation {
+  0% {
+    border: 3px solid crimson;
+  }
+
+  25% {
+    border: 3px solid rgb(20, 57, 220);
+  }
+
+  50% {
+    border: 3px solid rgb(20, 220, 70);
+  }
+
+  75% {
+    border: 3px solid rgb(220, 150, 20);
+  }
+
+  100% {
+    border: 3px solid rgb(20, 220, 220);
+  }
+
+}
+.create{
+  position: relative;
+  margin-top:55px;
+  padding: 10px;
+}
+#exit{
+  margin-left: 15px;
 }
 
-.createForm, .changeForm{
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.801) !important;
+.home{
+  padding: 40px;
+  border-radius: 50%;
+  z-index: 1000;
+  right: -25px;
+  top: 25px;
+  position: fixed;
+  background-color: rgba(134, 56, 243, 0.685);
+  text-align: center;
+  margin: auto;
+  transform: rotate(20deg);
+  font-family: 'Girassol', cursive;
+  font-size: 20px;
+  color: cornsilk;
+  transition: 0.9s;
+  border: 3px solid rgba(255, 0, 0, 0);
+}
+.home:hover{
+  right: -25px;
+  top: 25px;
+  padding: 44px;
+  transition: 0.9s;
+  background-color: rgba(30, 201, 36, 0.364);
+  background-color: rgba(30, 150, 201, 0.685);
+  animation-name: border-animation;
+  animation-duration: 200ms;
+  animation-iteration-count: infinite;
+}
+.my_btn{
+  width: 100%;
+  margin: 3px;
+}
+.my_form_edit{
+  width: 60%;
+  margin-left: 20%;
   color: aliceblue;
+}
+.my_edit_card{
+  margin-top: 70px;
+  width: 60%;
+  margin-left: 20%;
+  color: aliceblue;
+}
+.not_found_data h1{
+  color: aliceblue;
+  font-family: 'Girassol', cursive;
+  text-align: center;
+  margin-top: 100px;
+}
+.not_found_data img{
+  width: 490px;
+  height: 470px;
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  margin-left: -245px;
+  padding: 0px;
+}
+.circle{
+  border-radius: 50%;
+  position: fixed;
 }

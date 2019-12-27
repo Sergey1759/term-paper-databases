@@ -1,7 +1,31 @@
+{{#if data.length}}
+    <table class="table">
+  <tr>
+      <td width=10%>Назва команди</td>
+      <td width=55%>Опис команди</td>
+      <td width=25% colspan="2">Приклад</td>
+  <tr>
 {{#each data}}
-<div class=" mb-3">
-  <div class="card-body text-white bg-dark">
-    <a href="/command/{{this.id}}"><h5 class="card-title">{{this.command}}</h5></a>
-    <p class="card-text">{{this.description}}</p>
-  </div>
+    <tr>
+      <td width=10%>{{this.command}}</td>
+      <td width=55%>{{this.description}} </td>
+      <td width=25%>{{this.exemple}} </td>
+       <td>
+         <form action="/delete" method="POST">
+        <input type="hidden" name="id" value={{this.id}}>
+        <button type="submit" class="btn btn-danger my_btn">delete</button>
+        </form>
+        <a href="/edit/{{this.id}}">
+         <button class="btn bg-info my_btn" >edit</button></a>
+       </td> 
+  <tr>
 {{/each}}
+</table>
+{{else}}
+    <div class="not_found_data">
+      <h1>
+        По даному запиту нічого не знайденно
+      </h1>
+      <img src="../images/not_found.gif">
+    </div>
+{{/if}}
